@@ -1,11 +1,11 @@
 pipeline {
     agent {
-        docker { image 'ngnix-image' }
+        docker { image 'node:14-alpine' }
     }
     stages {
         stage('Test') {
             steps {
-                sh 'lsb-release --version'
+                sh 'node --version'
             }
         }
     }
